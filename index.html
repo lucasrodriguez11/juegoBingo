@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bingo Online</h1>
+            <div id="fichas">
+                <span>Fichas: </span><span id="contadorFichas"></span>
+                <input type="number" id="agregarFichas" placeholder="Agregar fichas">
+                <button id="btnAgregarFichas">Agregar</button>
+            </div>
+        </header>
+        
+        <section id="registro">
+            <h2>Registro de Jugadores</h2>
+            <form id="formularioRegistro">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" required>
+                
+                <label for="apodo">Apodo:</label>
+                <input type="text" id="apodo" required>
+                
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                </select>
+                
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+        
+        <section id="juego" style="display: none;">
+            <div id="control">
+                <button id="generarTableroAleatorio">Generar Tablero Aleatorio</button>
+                <button id="elegirNumeros">Elegir Números Manualmente</button>
+                <button id="generarBolilla">Generar Número</button>
+                <div id="bolillaActual"></div>
+            </div>
+            <div id="tableros"></div>
+        </section>
+
+        <div id="modalManual" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Elige tus números</h2>
+                <form id="formManual">
+                    <div id="numerosManuales" class="manual-grid">
+                        <!-- aca se generan los inputs para los números -->
+                    </div>
+                    <button type="submit">Generar Tablero</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

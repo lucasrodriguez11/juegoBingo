@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #383b3f;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #35353583;
+    border: 2px solid #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #541909;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#bolillero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bolillaActual {
+    font-size: 2em;
+    margin: 10px 0;
+    color: yellow;
+}
+
+#fichas {
+    font-size: 1.2em;
+}
+
+#registro, #juego {
+    margin-top: 20px;
+}
+
+#control {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tablero {
+    border: 2px solid #541909;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #104522;
+    display: inline-block;
+    width: 220px; 
+}
+
+h1, h2 {
+    color: #ffeb3b;
+}
+
+
+label {
+    color: white;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+button:hover {
+    background-color: yellow;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.numero {
+    padding: 10px;
+    background-color: #adb5bd;
+    border-radius: 5px;
+    color: #343a40;
+}
+
+.numero.resaltado {
+    background-color: yellow;
+    color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #104522;
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid  #541909;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #343a40;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.manual-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.manual-grid input {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.manual-columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manual-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
